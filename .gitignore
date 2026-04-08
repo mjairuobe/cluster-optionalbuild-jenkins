@@ -1,0 +1,8 @@
+.jenkins_runtime.env
+.jenkins_skip_pipeline
+.jenkins_build_plan.env
+.jenkins_last_trees
+.docker-reqs-*.txt
+__pycache__/
+*.pyc
+.venv/

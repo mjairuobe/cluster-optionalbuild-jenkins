@@ -1,0 +1,32 @@
+{
+  "dir": {
+    "packages": [
+      "example-packages/alpha-lib"
+    ],
+    "services": [
+      "example-services/http-api",
+      "example-services/worker"
+    ]
+  },
+  "docker": {
+    "python_image": "python:3.11-slim-bookworm",
+    "registry": "docker.io/example-org",
+    "images": {
+      "example-services/http-api": "http-api",
+      "example-services/worker": "worker"
+    },
+    "containers": {
+      "example-services/http-api": "demo-http-api",
+      "example-services/worker": "demo-worker"
+    },
+    "stage_targets": {
+      "example-services/http-api": "svc-http-api",
+      "example-services/worker": "svc-worker"
+    },
+    "cmd": {
+      "example-services/http-api": ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"],
+      "example-services/worker": ["python", "/app/main.py"]
+    }
+  },
+  "required_stack_services": ["mongo"]
+}

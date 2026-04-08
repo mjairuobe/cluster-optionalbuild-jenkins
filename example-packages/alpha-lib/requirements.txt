@@ -1,0 +1,4 @@
+# Build / wheel (optional zusätzlich zu pyproject)
+build>=1.0.0
+setuptools>=61.0
+wheel>=0.42.0
