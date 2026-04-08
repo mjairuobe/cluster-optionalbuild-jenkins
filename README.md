@@ -1,5 +1,3 @@
-# Modular CI template (Docker / Jenkins)
-
 This repository helps you **build container images from a single repo** (for example for Kubernetes) **via CI/CD without rebuilding every image on every run**. Only services whose code or dependency tree changed are rebuilt; the rest can keep running with their existing tags.
 
 ## Goal
